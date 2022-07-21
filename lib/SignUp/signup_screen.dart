@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key, required this.title}) : super(key: key);
@@ -41,7 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     } else if (passwordController.text.isEmpty ||
         retypePasswordController.text.isEmpty ||
         passwordController.text.length <
-            9|| retypePasswordController.text.length < 9) {
+            6|| retypePasswordController.text.length < 6) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('Please enter password'),
       ));
